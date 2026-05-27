@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: n8n
+    env: docker
+    repo: https://github.com/rudy691/n8n-manual-deploy
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: N8N_BASIC_AUTH_ACTIVE
+        value: true
+      - key: N8N_BASIC_AUTH_USER
+        value: admin
+      - key: N8N_BASIC_AUTH_PASSWORD
+        value: Rudy0988694063
+      - key: N8N_ENCRYPTION_KEY
+        value: d03e9bb15266871dcade35a429ae6fbfaa918cd9980c6e8e0b890413dc3173ce
+    disk:
+      name: n8n-data
+      mountPath: /home/node/.n8n
+      sizeGB: 1
+
+databases:
+  - name: n8n-db
+    plan: free
