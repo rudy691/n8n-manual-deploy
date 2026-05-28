@@ -15,5 +15,5 @@ services:
       - key: N8N_ENCRYPTION_KEY
         value: d03e9bb15266871dcade35a429ae6fbfaa918cd9980c6e8e0b890413dc3173ce  
 databases:
-  - name: n8n-db
+  - name: n8n-db-v2
     plan: free
